@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mohamad Safwat — Procurement & operations diagnostics for distribution</title>
+<meta name="description" content="A supply rate of 72.8% concealed a fulfilment failure: 44% of repeat orders received nothing. Procurement and operations diagnostics for distribution businesses, run on the data you already have.">
+<meta name="author" content="Mohamad Safwat">
+
+<!-- Once the custom domain is live, change og:image / twitter:image to the absolute
+     https URL (e.g. https://example.com/og-cover.png). LinkedIn and X require it;
+     relative works for Slack and iMessage. -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="A supply rate of 72.8% concealed a fulfilment failure">
+<meta property="og:description" content="Standard reports show totals and averages — that's exactly where the gaps hide. Procurement and operations diagnostics for distribution businesses.">
+<meta property="og:image" content="og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A supply rate of 72.8% concealed a fulfilment failure">
+<meta name="twitter:description" content="Procurement and operations diagnostics for distribution businesses, run on the data you already have.">
+<meta name="twitter:image" content="og-cover.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --paper: #FDFDFC;
+    --ink: #32322E;
+    --muted: #5F5F58;
+    --navy: #1B3A5C;
+    --navy-deep: #16324F;
+    --red: #B4453C;
+    --red-deep: #9E3A31;
+    --teal: #4A7C6F;
+    --grey: #8A8A85;
+    --quiet: #67675F;
+    --rule: #E2E1DA;
+    --rule-strong: #CFCEC5;
+
+    --on-navy: #ECEBE4;
+    --on-navy-muted: #AFC1CF;
+    --on-navy-rule: #35547A;
+
+    --measure: 40rem;
+    --gutter: clamp(1.25rem, 5vw, 2.5rem);
+    --section-y: clamp(3.75rem, 10vw, 7rem);
+    --label-col: 9rem;
+    --label-gap: 3rem;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { -webkit-text-size-adjust: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 1.0625rem;
+    line-height: 1.62;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  .wrap {
+    max-width: var(--measure);
+    margin: 0 auto;
+    padding: 0 var(--gutter);
+  }
+
+  /* On wider viewports: section labels sit in a left margin column,
+     content holds a fixed reading measure on a single left axis. */
+  @media (min-width: 60rem) {
+    .wrap {
+      max-width: calc(var(--label-col) + var(--label-gap) + var(--measure));
+      display: grid;
+      grid-template-columns: var(--label-col) minmax(0, var(--measure));
+      column-gap: var(--label-gap);
+      align-content: start;
+    }
+    .wrap > * { grid-column: 2; }
+    .wrap > .kicker {
+      grid-column: 1;
+      margin: 0;
+      padding-top: 0.4rem;
+      line-height: 1.4;
+    }
+
+    /* The opening has no margin label; keep its content on the same
+       left axis as every section below it. */
+    .opening .wrap {
+      display: block;
+      padding-left: calc(var(--gutter) + var(--label-col) + var(--label-gap));
+    }
+  }
+
+  section { padding: var(--section-y) 0; }
+
+  p { margin: 0 0 1.1em; max-width: var(--measure); }
+  p:last-child { margin-bottom: 0; }
+
+  a { color: var(--red-deep); text-underline-offset: 2px; text-decoration-thickness: 1px; }
+  a:hover { text-decoration: none; }
+
+  h1, h2, h3 {
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.14;
+    letter-spacing: -0.014em;
+    margin: 0;
+  }
+
+  .mono {
+    font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  }
+
+  /* ---- Label (not an all-caps eyebrow: sentence case, tucked to the side) ---- */
+  .kicker {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.01em;
+    color: var(--muted);
+    margin: 0 0 1.4rem;
+  }
+
+  /* =========================  OPENING  ========================= */
+  .opening {
+    background: var(--navy);
+    color: var(--on-navy);
+    padding: clamp(4.5rem, 13vw, 8.5rem) 0 clamp(4rem, 11vw, 7rem);
+  }
+  .opening h1 {
+    color: #FFFFFF;
+    font-size: clamp(1.95rem, 5.4vw, 3.15rem);
+    letter-spacing: -0.02em;
+    line-height: 1.08;
+    max-width: 22ch;
+  }
+  .opening .subhead {
+    margin-top: 1.5rem;
+    font-size: clamp(1.05rem, 2.4vw, 1.2rem);
+    line-height: 1.58;
+    color: var(--on-navy);
+    max-width: 46ch;
+  }
+  .opening .subhead .highlight {
+    color: #FFFFFF;
+    font-weight: 500;
+    background-image: linear-gradient(to top, rgba(180, 69, 60, 0.55) 0.12em, transparent 0.12em);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+  .positioning {
+    margin-top: clamp(2.5rem, 6vw, 3.75rem);
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--on-navy-rule);
+    font-size: 1.05rem;
+    line-height: 1.55;
+    color: var(--on-navy-muted);
+    max-width: 44ch;
+  }
+  .positioning strong { color: #FFFFFF; font-weight: 500; }
+
+  /* =========================  CASE STUDY  ========================= */
+  .case h2 {
+    font-size: clamp(1.55rem, 3.8vw, 2.25rem);
+    max-width: 20ch;
+  }
+  .standfirst {
+    margin-top: 1.4rem;
+    font-size: 1.15rem;
+    line-height: 1.55;
+    color: var(--ink);
+    max-width: 44ch;
+  }
+
+  .block { margin-top: clamp(2.75rem, 6vw, 3.75rem); }
+  .block h3 {
+    font-size: 1.12rem;
+    letter-spacing: -0.005em;
+    margin-bottom: 0.7rem;
+  }
+
+  .finding {
+    font-size: clamp(1.15rem, 2.7vw, 1.4rem);
+    line-height: 1.5;
+    color: var(--navy);
+    font-weight: 400;
+    max-width: 34ch;
+    margin: 0;
+  }
+  .finding b { font-weight: 600; color: var(--navy); }
+
+  /* ---- Signature chart ---- */
+  figure.chart {
+    margin: clamp(2.25rem, 5vw, 3.25rem) 0 0;
+    max-width: 33rem;
+  }
+  figure.chart svg { display: block; width: 100%; height: auto; }
+  figure.chart figcaption {
+    margin-top: 1.15rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--muted);
+    max-width: 42ch;
+  }
+  .chart text { font-family: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .chart .c-num {
+    font-family: "IBM Plex Sans", -apple-system, sans-serif;
+    font-size: 25px; font-weight: 600; letter-spacing: -0.02em;
+  }
+  .chart .c-val { font-size: 22px; font-weight: 500; letter-spacing: -0.03em; }
+  .chart .c-cat { font-size: 14px; fill: var(--muted); font-family: "IBM Plex Sans", -apple-system, sans-serif; }
+  .chart .c-sub { font-size: 13.5px; fill: var(--quiet); font-family: "IBM Plex Sans", -apple-system, sans-serif; }
+
+  /* ---- Impact: three plain figures, ledger-style, not cards ---- */
+  .figures { margin-top: clamp(2.5rem, 6vw, 3.5rem); border-top: 1px solid var(--rule-strong); }
+  .figure-row {
+    display: flex;
+    align-items: baseline;
+    gap: clamp(1rem, 4vw, 2.25rem);
+    padding: 1.15rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .figure-row .n {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-weight: 500;
+    font-size: clamp(1.6rem, 5.5vw, 2.4rem);
+    color: var(--navy);
+    line-height: 1;
+    flex: 0 0 auto;
+    min-width: 4.4ch;
+    letter-spacing: -0.02em;
+  }
+  .figure-row .t { color: var(--ink); font-size: 1rem; line-height: 1.45; }
+
+  .note {
+    margin-top: 1.5rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--quiet);
+    max-width: 44ch;
+  }
+
+  /* ---- Download ---- */
+  .download {
+    margin-top: clamp(2.5rem, 6vw, 3.25rem);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.9rem 1.1rem;
+  }
+  .download a.btn {
+    display: inline-block;
+    background: var(--red-deep);
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.02rem;
+    padding: 0.85rem 1.4rem;
+    border-radius: 2px;
+  }
+  .download a.btn:hover { background: #8a332b; }
+  .download a.btn:focus-visible { outline: 2px solid var(--navy); outline-offset: 2px; }
+  .download .meta {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+
+  /* =========================  HOW I WORK  ========================= */
+  .how { border-top: 1px solid var(--rule); }
+  .how h2 { font-size: clamp(1.45rem, 3.4vw, 2rem); }
+  ol.steps {
+    list-style: none;
+    counter-reset: step;
+    margin: clamp(2rem, 5vw, 2.75rem) 0 0;
+    padding: 0;
+  }
+  ol.steps li {
+    counter-increment: step;
+    display: grid;
+    grid-template-columns: 2.6rem 1fr;
+    gap: 0.4rem 1rem;
+    padding: 1.4rem 0;
+    border-top: 1px solid var(--rule);
+    max-width: var(--measure);
+  }
+  ol.steps li:first-child { border-top: 0; padding-top: 0; }
+  ol.steps li::before {
+    content: counter(step);
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 1rem;
+    color: var(--red-deep);
+    padding-top: 0.15rem;
+  }
+  ol.steps li h3 {
+    grid-column: 2;
+    font-size: 1.05rem;
+    margin-bottom: 0.3rem;
+  }
+  ol.steps li p {
+    grid-column: 2;
+    margin: 0;
+    color: var(--ink);
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  .closing-line {
+    margin-top: clamp(1.75rem, 4vw, 2.5rem);
+    font-size: 1rem;
+    color: var(--muted);
+  }
+
+  /* =========================  WHO I AM  ========================= */
+  .who { border-top: 1px solid var(--rule); }
+  .who h2 { font-size: clamp(1.45rem, 3.4vw, 2rem); margin-bottom: clamp(1.5rem, 4vw, 2rem); }
+  .who p { font-size: 1.08rem; line-height: 1.6; }
+
+  /* =========================  CONTACT  ========================= */
+  .contact {
+    background: var(--navy);
+    color: var(--on-navy);
+    padding: var(--section-y) 0;
+  }
+  .contact h2 { color: #FFFFFF; font-size: clamp(1.45rem, 3.4vw, 2rem); }
+  .contact p { color: var(--on-navy); max-width: 46ch; margin-top: 1.2rem; }
+  .contact a.email {
+    display: inline-block;
+    justify-self: start;
+    margin-top: 0.6rem;
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    color: #FFFFFF;
+    text-decoration: none;
+    border-bottom: 1px solid var(--red);
+    padding-bottom: 2px;
+    overflow-wrap: break-word;
+  }
+  .contact a.email:hover { border-bottom-width: 2px; }
+  .contact .kicker { color: var(--on-navy-muted); }
+  .contact .avail {
+    margin-top: clamp(2rem, 5vw, 2.75rem);
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--on-navy-rule);
+    font-size: 0.95rem;
+    color: var(--on-navy-muted);
+  }
+
+  :where(a, button):focus-visible { outline: 2px solid var(--red-deep); outline-offset: 3px; border-radius: 1px; }
+
+  @media (max-width: 400px) {
+    ol.steps li { grid-template-columns: 1.8rem 1fr; }
+    .figure-row { gap: 0.85rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ 1 · OPENING ============ -->
+<header class="opening">
+  <div class="wrap">
+    <h1>Most distributors don’t lose money on one big mistake.</h1>
+    <p class="subhead">They lose it in the gaps — the same item bought at three different prices, a supplier who quietly became <span class="highlight">60% of purchasing</span>, an order that was never delivered at all. Standard reports show totals and averages. That’s exactly where these gaps hide.</p>
+    <p class="positioning"><strong>I run procurement and operations diagnostics for distribution businesses,</strong> and build the systems that close what the analysis finds.</p>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ 2 · CASE STUDY ============ -->
+<section class="case">
+  <div class="wrap">
+    <p class="kicker">Case study</p>
+    <h2>A supply rate of 72.8% concealed a fulfilment failure</h2>
+    <p class="standfirst">A national health authority in the MENA region was tracking a single procurement metric: 72.8% of demand supplied. Stable, unremarkable, and wrong about the thing that mattered.</p>
+
+    <div class="block">
+      <h3>The finding</h3>
+      <p class="finding">That 72.8% was an average of two extremes. Orders were either fulfilled completely or not at all — <b>44% of repeat orders received nothing</b>. Almost no partial deliveries. Not random under-supply; a systemic failure the headline metric was smoothing over.</p>
+
+      <figure class="chart">
+        <svg viewBox="0 0 460 300" role="img" aria-labelledby="chart-title chart-desc">
+          <title id="chart-title">Repeat orders by share of the order fulfilled</title>
+          <desc id="chart-desc">On a scale from nothing delivered to fully delivered, repeat orders pile up at the two ends: about 44 percent received nothing, and most of the rest arrived in full. Almost none landed in between. The reported 72.8 percent supply rate falls in that empty middle, short of the full-delivery spike.</desc>
+
+          <line x1="24" y1="256" x2="440" y2="256" stroke="#CFCEC5" stroke-width="1"/>
+
+          <!-- bars on a 0%..100% axis (x 54 = 0%, x 414 = 100%), 3.6px per 1% of orders -->
+          <rect x="32"  y="80"  width="44" height="176" fill="#B4453C"/>
+          <rect x="213" y="232" width="44" height="24"  fill="#BFBFB6"/>
+          <rect x="392" y="72"  width="44" height="184" fill="#4A7C6F"/>
+
+          <text x="54"  y="68" text-anchor="middle" class="c-val" fill="#B4453C">44%</text>
+
+          <!-- reported-rate marker at 72.8% of the axis -->
+          <line x1="316" y1="64" x2="316" y2="256" stroke="#1B3A5C" stroke-width="1.4" stroke-dasharray="3 3"/>
+          <circle cx="316" cy="64" r="3" fill="#1B3A5C"/>
+          <text x="316" y="30" text-anchor="middle" class="c-num" fill="#1B3A5C">72.8%</text>
+          <text x="316" y="49" text-anchor="middle" class="c-sub">reported supply rate</text>
+
+          <text x="26"  y="278" text-anchor="start"  class="c-cat">Nothing delivered</text>
+          <text x="234" y="278" text-anchor="middle" class="c-cat">Half</text>
+          <text x="438" y="278" text-anchor="end"    class="c-cat">Fully delivered</text>
+        </svg>
+        <figcaption>Repeat orders by how much of the order actually arrived. The headline rate lands in the gap between the two outcomes that actually occur.</figcaption>
+      </figure>
+    </div>
+
+    <div class="block">
+      <h3>What it added up to</h3>
+      <div class="figures">
+        <div class="figure-row"><span class="n">27%</span><span class="t">of annual procurement value unfulfilled</span></div>
+        <div class="figure-row"><span class="n">44%</span><span class="t">of repeat orders received nothing</span></div>
+        <div class="figure-row"><span class="n">59</span><span class="t">suppliers analysed across 1,233 items</span></div>
+      </div>
+    </div>
+
+    <div class="block">
+      <h3>What it meant</h3>
+      <p>The unfulfilled orders were not spread evenly across the catalogue. They concentrated in items with no clinical substitute — anticoagulants, anaesthetics, antibiotics. The organisation was not slightly under-supplied. It was fully supplied on some things and entirely without others.</p>
+    </div>
+
+    <div class="block">
+      <h3>What was recommended</h3>
+      <p>Supplier segmentation by fulfilment performance rather than spend. Inventory policy rebuilt around item criticality instead of value. Forecasting adjusted for historical supplier reliability, so the plan reflected expected supply rather than demand alone.</p>
+    </div>
+
+    <div class="download">
+      <a class="btn" href="procurement-diagnostic.pdf" target="_blank" rel="noopener">Read the full analysis (PDF)</a>
+      <span class="meta">6-page PDF, opens in a new tab</span>
+    </div>
+    <p class="note">Anonymised at the client’s level of confidentiality. Supplier names and identifying figures removed.</p>
+  </div>
+</section>
+
+<!-- ============ 3 · HOW I WORK ============ -->
+<section class="how">
+  <div class="wrap">
+    <p class="kicker">Method</p>
+    <h2>How a diagnostic runs</h2>
+    <ol class="steps">
+      <li>
+        <h3>Start with the data you already have</h3>
+        <p>Twelve months of purchase records in a spreadsheet or an export from your system. No new software, no integration project.</p>
+      </li>
+      <li>
+        <h3>Find where the money and the reliability are going</h3>
+        <p>Price variance on identical items, supplier concentration, discount leakage, fulfilment failure, capital locked in slow-moving stock.</p>
+      </li>
+      <li>
+        <h3>Separate the symptoms from the causes</h3>
+        <p>A supplier missing deliveries and a category losing margin often share one root — usually a process, not a person.</p>
+      </li>
+      <li>
+        <h3>Hand over something usable</h3>
+        <p>A written analysis, an executive presentation, and a prioritised list of what to change first.</p>
+      </li>
+    </ol>
+    <p class="closing-line">Six weeks, typically. Longer if the data needs rebuilding first.</p>
+  </div>
+</section>
+
+<!-- ============ 4 · WHO I AM ============ -->
+<section class="who">
+  <div class="wrap">
+    <p class="kicker">Background</p>
+    <h2>Who I am</h2>
+    <p>I’m a pharmacist with an MBA, and I’ve owned and run a medical consumables and pharmaceutical distribution company since 2018. Most consultants analyse these decisions. I make them with my own money, then analyse them.</p>
+    <p>That’s also why I build. When the analysis showed our own purchasing and inventory decisions were being made on instinct, I built a full ERP system to run them on data instead. It went live in the business in 2026 and runs it today.</p>
+    <p>Other work includes discount and margin leakage analysis across a large annual purchasing book, and supplier performance benchmarking.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ 5 · CONTACT ============ -->
+<footer class="contact">
+  <div class="wrap">
+    <p class="kicker">Contact</p>
+    <h2>Get in touch</h2>
+    <p>If you have twelve months of purchasing data and a suspicion something is leaking, send me a note describing your setup and I’ll tell you what I’d expect to find.</p>
+    <a class="email" href="mailto:mohamad.safwat42@gmail.com">mohamad.safwat42@gmail.com</a>
+    <p class="avail">Available for subcontract and white-label work with consultancies.</p>
+  </div>
+</footer>
+
+</body>
+</html>
