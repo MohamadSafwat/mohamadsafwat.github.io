@@ -7,16 +7,16 @@
 <meta name="description" content="A supply rate of 72.8% concealed a fulfilment failure: 44% of repeat orders received nothing. Procurement and operations diagnostics for distribution businesses, run on the data you already have.">
 <meta name="author" content="Mohamad Safwat">
 
-<!-- Once the custom domain is live, change og:image / twitter:image to the absolute
-     https URL (e.g. https://example.com/og-cover.png). LinkedIn and X require it;
-     relative works for Slack and iMessage. -->
+<!-- og:image / twitter:image are absolute because LinkedIn and X will not
+     resolve a relative path. Update the host if the site moves off
+     mohamadsafwat.github.io to a custom domain. -->
 <meta property="og:type" content="website">
+<meta property="og:site_name" content="Mohamad Safwat">
 <meta property="og:title" content="A supply rate of 72.8% concealed a fulfilment failure">
 <meta property="og:description" content="Standard reports show totals and averages — that's exactly where the gaps hide. Procurement and operations diagnostics for distribution businesses.">
 <meta property="og:image" content="https://mohamadsafwat.github.io/og-cover.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:site_name" content="Mohamad Safwat">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="A supply rate of 72.8% concealed a fulfilment failure">
 <meta name="twitter:description" content="Procurement and operations diagnostics for distribution businesses, run on the data you already have.">
@@ -166,6 +166,13 @@
     max-width: 44ch;
   }
   .positioning strong { color: #FFFFFF; font-weight: 500; }
+  .signpost {
+    margin-top: 0.9rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--on-navy-muted);
+    max-width: 44ch;
+  }
 
   /* =========================  CASE STUDY  ========================= */
   .case h2 {
@@ -235,7 +242,9 @@
     color: var(--navy);
     line-height: 1;
     flex: 0 0 auto;
-    min-width: 4.4ch;
+    width: 7.5ch;            /* fixed so every label starts at the same x, in both case studies */
+    white-space: nowrap;
+    word-spacing: -0.25em;   /* keeps "6 weeks" from gaping in the mono column */
     letter-spacing: -0.02em;
   }
   .figure-row .t { color: var(--ink); font-size: 1rem; line-height: 1.45; }
@@ -247,6 +256,7 @@
     color: var(--quiet);
     max-width: 44ch;
   }
+  .note.note-tight { margin-top: 0.45rem; }
 
   /* ---- Download ---- */
   .download {
@@ -272,6 +282,58 @@
     font-family: "IBM Plex Mono", ui-monospace, monospace;
     font-size: 0.8rem;
     color: var(--muted);
+  }
+
+  /* =========================  BRIDGE — thesis line between the two cases  ========================= */
+  .bridge { padding: clamp(4rem, 9vw, 6.5rem) 0 clamp(2rem, 5vw, 3rem); }
+  .bridge p {
+    margin: 0;
+    font-size: clamp(1.3rem, 3.4vw, 1.75rem);
+    line-height: 1.42;
+    font-weight: 400;
+    letter-spacing: -0.012em;
+    color: var(--navy);
+    max-width: 30ch;
+  }
+
+  /* Case two shares .case; it sits tight under the bridge it belongs with */
+  .case-two { padding-top: clamp(1.5rem, 4vw, 2.5rem); }
+
+  /* ---- Process flow (case two) — stacked on narrow, inline on wide ---- */
+  .flow {
+    list-style: none;
+    margin: 0 0 clamp(1.5rem, 3.5vw, 2rem);
+    padding: 0;
+    max-width: var(--measure);
+    color: var(--red);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  .flow li { display: block; }
+  .flow li:not(:last-child)::after {
+    content: "↓";
+    display: block;
+    margin: 0.4rem 0;
+    opacity: 0.55;
+    line-height: 1;
+  }
+
+  /* On wide viewports the flow reads as one horizontal line and breaks
+     left to the label axis, so it stays two lines rather than three. */
+  @media (min-width: 60rem) {
+    .case-two .block .flow {
+      margin-left: calc(-1 * (var(--label-col) + var(--label-gap)));
+      max-width: none;
+      line-height: 1.95;
+    }
+    .flow li { display: inline; }
+    .flow li:not(:last-child)::after {
+      content: " → ";
+      display: inline;
+      margin: 0;
+      opacity: 0.6;
+      white-space: pre;
+    }
   }
 
   /* =========================  HOW I WORK  ========================= */
@@ -331,19 +393,25 @@
   }
   .contact h2 { color: #FFFFFF; font-size: clamp(1.45rem, 3.4vw, 2rem); }
   .contact p { color: var(--on-navy); max-width: 46ch; margin-top: 1.2rem; }
-  .contact a.email {
-    display: inline-block;
-    justify-self: start;
-    margin-top: 0.6rem;
+  .contact .links {
+    margin-top: 0.7rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.55rem;
+  }
+  .contact .links a {
     font-family: "IBM Plex Mono", ui-monospace, monospace;
     font-size: clamp(1rem, 3vw, 1.25rem);
+    line-height: 1.4;
     color: #FFFFFF;
-    text-decoration: none;
-    border-bottom: 1px solid var(--red);
-    padding-bottom: 2px;
-    overflow-wrap: break-word;
+    text-decoration: underline;
+    text-decoration-color: var(--red);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
   }
-  .contact a.email:hover { border-bottom-width: 2px; }
+  .contact .links a:hover { text-decoration-thickness: 2px; }
   .contact .kicker { color: var(--on-navy-muted); }
   .contact .avail {
     margin-top: clamp(2rem, 5vw, 2.75rem);
@@ -369,6 +437,7 @@
     <h1>Most distributors don’t lose money on one big mistake.</h1>
     <p class="subhead">They lose it in the gaps — the same item bought at three different prices, a supplier who quietly became <span class="highlight">60% of purchasing</span>, an order that was never delivered at all. Standard reports show totals and averages. That’s exactly where these gaps hide.</p>
     <p class="positioning"><strong>I run procurement and operations diagnostics for distribution businesses,</strong> and build the systems that close what the analysis finds.</p>
+    <p class="signpost">Two cases below: one on finding the leak, one on building the fix.</p>
   </div>
 </header>
 
@@ -434,14 +503,68 @@
 
     <div class="download">
       <a class="btn" href="procurement-diagnostic.pdf" target="_blank" rel="noopener">The findings in six slides (PDF)</a>
-      <span class="meta">6-page PDF, opens in a new tab</span>
+      <span class="meta">opens in a new tab</span>
     </div>
-     <p class="note">The full 16-slide analysis is available on request.</p>
     <p class="note">Anonymised at the client’s level of confidentiality. Supplier names and identifying figures removed.</p>
+    <p class="note note-tight">The full 16-slide analysis is available on request.</p>
   </div>
 </section>
 
-<!-- ============ 3 · HOW I WORK ============ -->
+<!-- ============ 3 · BRIDGE ============ -->
+<section class="bridge">
+  <div class="wrap">
+    <p>The first case is what analysis finds. The second is what happens when you build on it.</p>
+  </div>
+</section>
+
+<!-- ============ 4 · CASE STUDY — THE ERP BUILD ============ -->
+<section class="case case-two">
+  <div class="wrap">
+    <p class="kicker">Case study</p>
+    <h2>The owner had become the bottleneck in his own business</h2>
+    <p class="standfirst">Seven Excel workbooks held customers, suppliers, purchasing, expenses, capital and pricing. None of them talked to each other, and only one person could reconcile them — so every customer question routed through him.</p>
+
+    <div class="block">
+      <h3>The problem</h3>
+      <ol class="flow">
+        <li>Sales operator needs a figure</li>
+        <li>waits for the owner</li>
+        <li>owner updates the spreadsheet when free</li>
+        <li>answer goes back</li>
+        <li>customer is told</li>
+        <li>operator returns with the next question</li>
+      </ol>
+      <p class="finding">The constraint was not the data. It was that one person had to be available for anyone else to do their job.</p>
+    </div>
+
+    <div class="block">
+      <h3>What was built</h3>
+      <p>Not software first. Three analytical models came first — a pricing model built from six years of transactions, a financial model that pulled every invoice, payment and expense into one place, and a dashboard to track it. Only then was it clear what the system needed to do.</p>
+      <p>The ERP was where those three were consolidated so the whole team could use them, not just the owner. Python and Flask, PostgreSQL, covering the full commercial cycle: order, sourcing, pricing, invoicing, receivables, reporting. Two product lines with different pricing logic, kept deliberately separate.</p>
+    </div>
+
+    <div class="figures">
+      <div class="figure-row"><span class="n">21.5%</span><span class="t">average pricing uplift, backtested against 2025 transactions</span></div>
+      <div class="figure-row"><span class="n">90%</span><span class="t">of the owner’s time on routine queries, returned</span></div>
+      <div class="figure-row"><span class="n">7</span><span class="t">Excel workbooks consolidated into one system</span></div>
+      <div class="figure-row"><span class="n">6 weeks</span><span class="t">from start to internal testing</span></div>
+    </div>
+
+    <div class="block">
+      <h3>Why it matters</h3>
+      <p>A software house quoted the low hundreds of thousands in local currency for an equivalent custom build, with the data held by the vendor. An off-the-shelf package would have imposed its own workflow and could not handle two product lines with different margin logic.</p>
+      <p>The advantage of building it in-house was not speed of coding. It was that no requirements-gathering phase was needed — the person specifying the system was the person running the business.</p>
+    </div>
+
+    <div class="download">
+      <a class="btn" href="erp-case-study.pdf" target="_blank" rel="noopener">The build in six slides (PDF)</a>
+      <span class="meta">opens in a new tab</span>
+    </div>
+    <p class="note">Currently in internal testing ahead of deployment.</p>
+  </div>
+</section>
+
+<!-- ============ 5 · HOW I WORK ============ -->
 <section class="how">
   <div class="wrap">
     <p class="kicker">Method</p>
@@ -468,27 +591,29 @@
   </div>
 </section>
 
-<!-- ============ 4 · WHO I AM ============ -->
+<!-- ============ 6 · WHO I AM ============ -->
 <section class="who">
   <div class="wrap">
     <p class="kicker">Background</p>
     <h2>Who I am</h2>
     <p>I’m a pharmacist with an MBA, and I’ve owned and run a medical consumables and pharmaceutical distribution company since 2018. Most consultants analyse these decisions. I make them with my own money, then analyse them.</p>
-    <p>That’s also why I build. When the analysis showed our own purchasing and inventory decisions were being made on instinct, I built a full ERP system to run them on data instead. It went live in the business in 2026 and runs it today.</p>
+    <p>That’s also why I build. When the analysis showed our own purchasing and inventory decisions were being made on instinct, I built the system described above to run them on data instead.</p>
     <p>Other work includes discount and margin leakage analysis across a large annual purchasing book, and supplier performance benchmarking.</p>
   </div>
 </section>
 
 </main>
 
-<!-- ============ 5 · CONTACT ============ -->
+<!-- ============ 7 · CONTACT ============ -->
 <footer class="contact">
   <div class="wrap">
     <p class="kicker">Contact</p>
     <h2>Get in touch</h2>
     <p>If you have twelve months of purchasing data and a suspicion something is leaking, send me a note describing your setup and I’ll tell you what I’d expect to find.</p>
-    <a class="email" href="mailto:mohamad.safwat42@gmail.com">mohamad.safwat42@gmail.com</a>
-     <a href="https://www.linkedin.com/in/mohamad-safwat-analytics" target="_blank" rel="noopener" class="...">linkedin.com/in/mohamad-safwat-analytics</a>
+    <div class="links">
+      <a href="mailto:mohamad.safwat42@gmail.com">mohamad.safwat42@gmail.com</a>
+      <a href="https://www.linkedin.com/in/mohamad-safwat-analytics" target="_blank" rel="noopener">linkedin.com/in/mohamad-safwat-analytics</a>
+    </div>
     <p class="avail">Available for subcontract and white-label work with consultancies.</p>
   </div>
 </footer>
