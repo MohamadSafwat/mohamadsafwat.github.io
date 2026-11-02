@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case study — health authority procurement | Mohamad Safwat</title>
+<meta name="description" content="A 72.8% supply rate that hid an all-or-nothing failure: 44% of repeat orders received nothing.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Case study — health authority procurement | Mohamad Safwat">
+<meta property="og:description" content="A 72.8% supply rate that hid an all-or-nothing failure: 44% of repeat orders received nothing.">
+<meta property="og:url" content="https://mohamadsafwat.github.io/health-procurement.html">
+<meta property="og:image" content="https://mohamadsafwat.github.io/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230F1B2D'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Arial' font-weight='700' font-size='28' fill='%23C9A84C'%3EMS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFFFFF}
+a{color:#0F1B2D}a:hover{color:#8A6417}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes growx{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes draw{from{stroke-dashoffset:700}to{stroke-dashoffset:0}}
+.rise{animation:rise .9s cubic-bezier(.2,.7,.2,1) both}
+.d1{animation-delay:.08s}.d2{animation-delay:.2s}.d3{animation-delay:.32s}.d4{animation-delay:.44s}
+.fade{animation:fade 1s ease 1.4s both}
+.col{transform-box:fill-box;transform-origin:bottom;animation:grow 1.1s cubic-bezier(.2,.7,.2,1) both}
+.bar{transform-box:fill-box;transform-origin:left;animation:growx 1.1s cubic-bezier(.2,.7,.2,1) both}
+.draw{stroke-dasharray:700;animation:draw 1.8s ease .7s both}
+@media (max-width: 640px){.navx{display:none !important}}
+.lift{transition:transform .28s cubic-bezier(.2,.7,.2,1),box-shadow .28s,border-color .28s}
+.lift:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(15,27,45,.12);border-color:#C9A84C}
+.btn{transition:transform .2s}.btn:hover{transform:translateY(-2px)}
+.calm .rise,.calm .fade,.calm .col,.calm .bar,.calm .draw{animation:none}
+@media (prefers-reduced-motion: reduce){.rise,.fade,.col,.bar,.draw{animation:none}.lift,.btn{transition:none}}
+</style>
+</head>
+<body>
+<div style="font-family: Inter, system-ui, sans-serif; color: #0F1B2D; background: #FFFFFF">
+
+  <header style="border-bottom: 1px solid #E6E8EC">
+    <nav style="max-width: 1200px; margin: 0 auto; padding: 20px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+      <a href="./" style="font-family: 'Inter Tight', sans-serif; font-weight: 700; font-size: 20px; text-decoration: none">Mohamad Safwat</a>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 24px; font-size: 15px">
+        <a href="./#work" style="text-decoration: none">← All work</a>
+        <a class="btn" href="#cta" style="text-decoration: none; font-weight: 600; background: #0F1B2D; color: #FFFFFF; padding: 11px 18px; border-radius: 6px">Book a call</a>
+      </div>
+    </nav>
+  </header>
+
+  <section style="background: #0F1B2D; color: #FFFFFF">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 96px 32px 80px; display: flex; flex-wrap: wrap; gap: 56px; align-items: center">
+      <div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
+        <p class="rise d1" style="margin: 0; font-size: 14px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: #C9A84C">Case study · Public healthcare procurement · MENA · 2024</p>
+        <h1 class="rise d2" style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: clamp(34px, 8vw, 56px); font-weight: 700; line-height: 1.05; letter-spacing: -0.025em">A 72.8% supply rate that hid an all-or-nothing failure</h1>
+        <p class="rise d3" style="margin: 0; font-size: 19px; line-height: 1.6; color: #C9D1DD; max-width: 620px">A national health authority tracked its pharmaceutical supply rate at 72.8% — a number that looked stable. Ten months of orders told a different story: most items arrived in full, or not at all.</p>
+      </div>
+      <div class="rise d4" style="flex: 1 1 380px; min-width: 0; background: #13223A; border: 1px solid #24344D; border-radius: 16px; padding: 22px 22px 14px">
+        <p style="margin: 0 0 4px; font-size: 13px; color: #8A96A8">Orders by share delivered</p>
+        <p style="margin: 0 0 12px; font-family: 'Inter Tight', sans-serif; font-size: 17px; font-weight: 600">Either nothing, or everything</p>
+        <svg viewBox="0 0 400 220" role="img" aria-label="Orders by share delivered: 44 percent got nothing, 47 percent arrived in full, under 10 percent in between" style="width: 100%; height: auto; display: block">
+          <line x1="10" y1="180" x2="390" y2="180" stroke="#33445E" stroke-width="1.5"></line>
+          <rect class="col" style="animation-delay:.5s" x="24" y="40" width="56" height="140" rx="4" fill="#E07A7E"></rect>
+          <rect class="col" style="animation-delay:.6s" x="102" y="177" width="56" height="3" rx="1" fill="#7AA2E3"></rect>
+          <rect class="col" style="animation-delay:.65s" x="174" y="167" width="56" height="13" rx="2" fill="#7AA2E3"></rect>
+          <rect class="col" style="animation-delay:.7s" x="246" y="167" width="56" height="13" rx="2" fill="#7AA2E3"></rect>
+          <rect class="col" style="animation-delay:.8s" x="318" y="30" width="56" height="150" rx="4" fill="#7AA2E3"></rect>
+          <g class="fade" font-family="Inter, sans-serif" font-size="13" font-weight="600" text-anchor="middle"><text x="52" y="30" fill="#F2B8BA">44%</text><text x="346" y="20" fill="#C9D9F5">47%</text><text x="202" y="158" fill="#8A96A8" font-size="11" font-weight="500">9% partly filled</text></g>
+          <g font-family="Inter, sans-serif" font-size="12" fill="#8A96A8" text-anchor="middle"><text x="52" y="204">nothing</text><text x="130" y="204">1–25%</text><text x="202" y="204">25–75%</text><text x="274" y="204">75–99%</text><text x="346" y="204">in full</text></g>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width: 1200px; margin: 0 auto; padding: 0 32px">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 1px; background: #E6E8EC; border: 1px solid #E6E8EC; border-radius: 12px; overflow: hidden">
+      <div style="background: #FFFFFF; padding: 24px"><p style="margin: 0; font-size: 13px; color: #6B7280">Client</p><p style="margin: 6px 0 0; font-size: 16px; font-weight: 600; line-height: 1.4">National health authority, pharmaceutical procurement</p></div>
+      <div style="background: #FFFFFF; padding: 24px"><p style="margin: 0; font-size: 13px; color: #6B7280">Data</p><p style="margin: 6px 0 0; font-size: 16px; font-weight: 600; line-height: 1.4">Every purchase order and delivery, Jun 2023 – Mar 2024</p></div>
+      <div style="background: #FFFFFF; padding: 24px"><p style="margin: 0; font-size: 13px; color: #6B7280">Scope</p><p style="margin: 6px 0 0; font-size: 16px; font-weight: 600; line-height: 1.4">59 suppliers · 1,233 items</p></div>
+      <div style="background: #FFFFFF; padding: 24px"><p style="margin: 0; font-size: 13px; color: #6B7280">Delivered</p><p style="margin: 6px 0 0; font-size: 16px; font-weight: 600; line-height: 1.4">Two Power BI dashboards · board story deck</p></div>
+    </div>
+  </section>
+
+  <section style="max-width: 1200px; margin: 0 auto; padding: 88px 32px 0">
+    <div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+      <div style="flex: 1 1 300px; min-width: 0"><p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #8A6417">THE QUESTION</p><p style="margin: 12px 0 0; font-family: 'Inter Tight', sans-serif; font-size: 28px; font-weight: 600; line-height: 1.3; letter-spacing: -0.01em">Why do hospitals still run out, when 73% of everything ordered arrives?</p></div>
+      <div style="flex: 999 1 520px; min-width: 0; font-size: 17px; line-height: 1.7; color: #2C3A4F"><p style="margin: 0">Leadership saw one monthly number — the supply rate — and it had been steady. Clinicians were reporting stockouts of essential medicines at the same time. My job was to reconcile the two: find where the missing 27% actually sat, which items and suppliers it came from, and what would close it.</p></div>
+    </div>
+  </section>
+
+  <section style="max-width: 1200px; margin: 0 auto; padding: 104px 32px 0">
+    <p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #8A6417">WHAT THE DATA SHOWED</p>
+    <h2 style="margin: 10px 0 0; font-family: 'Inter Tight', sans-serif; font-size: clamp(28px, 6vw, 40px); font-weight: 700; letter-spacing: -0.02em; max-width: 820px; line-height: 1.12">The average was hiding two extremes</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(330px, 100%), 1fr)); gap: 22px; margin-top: 44px">
+      <div class="lift" style="border: 1px solid #E6E8EC; border-radius: 12px; padding: 26px; display: flex; flex-direction: column; gap: 12px">
+        <div style="background: #F6F7F9; border-radius: 10px; padding: 12px 14px"><svg viewBox="0 0 300 100" role="img" aria-label="Demand value: 73 percent delivered, 27 percent not" style="width: 100%; height: 90px; display: block"><rect class="bar" x="10" y="26" width="205" height="34" rx="4" fill="#1F3864"></rect><rect class="bar" style="animation-delay:.3s" x="217" y="26" width="73" height="34" rx="4" fill="#C44E52"></rect><text x="112" y="48" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">delivered 73%</text><text x="253" y="48" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#FFFFFF">27%</text><text x="10" y="84" font-family="Inter, sans-serif" font-size="11" fill="#6B7280">total demand value, Jun 2023 – Mar 2024</text></svg></div>
+        <p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: clamp(28px, 5.5vw, 36px); font-weight: 700; color: #B23B3F; letter-spacing: -0.01em">27%</p>
+        <h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.35">Of demand value never arrived</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A5568">Behind a supply rate that looked stable, more than a quarter of what was ordered was not delivered — a direct risk to operations, not a rounding error.</p>
+      </div>
+      <div class="lift" style="border: 1px solid #E6E8EC; border-radius: 12px; padding: 26px; display: flex; flex-direction: column; gap: 12px">
+        <div style="background: #F6F7F9; border-radius: 10px; padding: 12px 14px"><svg viewBox="0 0 300 100" role="img" aria-label="44 percent of repeat orders received nothing" style="width: 100%; height: 90px; display: block"><circle cx="60" cy="50" r="34" fill="none" stroke="#1F3864" stroke-width="14"></circle><circle cx="60" cy="50" r="34" fill="none" stroke="#C44E52" stroke-width="14" stroke-dasharray="94 214" transform="rotate(-90 60 50)"></circle><text x="116" y="44" font-family="Inter, sans-serif" font-size="12" fill="#C44E52" font-weight="600">nothing arrived</text><text x="116" y="64" font-family="Inter, sans-serif" font-size="12" fill="#1F3864">something arrived</text></svg></div>
+        <p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: clamp(28px, 5.5vw, 36px); font-weight: 700; color: #B23B3F; letter-spacing: -0.01em">44%</p>
+        <h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.35">Of repeat orders received nothing</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A5568">For routine, recurring items — the ones that should be easiest — delivery was close to a coin toss.</p>
+      </div>
+      <div class="lift" style="border: 1px solid #E6E8EC; border-radius: 12px; padding: 26px; display: flex; flex-direction: column; gap: 12px">
+        <div style="background: #F6F7F9; border-radius: 10px; padding: 12px 14px"><svg viewBox="0 0 300 100" role="img" aria-label="Orders: 44 percent nothing, 9 percent partial, 47 percent in full" style="width: 100%; height: 90px; display: block"><rect class="bar" x="10" y="30" width="123" height="34" rx="4" fill="#C44E52"></rect><rect class="bar" style="animation-delay:.2s" x="135" y="30" width="25" height="34" rx="2" fill="#E3A3A6"></rect><rect class="bar" style="animation-delay:.4s" x="162" y="30" width="128" height="34" rx="4" fill="#1F3864"></rect><g font-family="Inter, sans-serif" font-size="11"><text x="10" y="84" fill="#C44E52" font-weight="600">nothing 44%</text><text x="134" y="22" fill="#B23B3F">partial 9%</text><text x="290" y="84" text-anchor="end" fill="#1F3864" font-weight="600">in full 47%</text></g></svg></div>
+        <p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: clamp(28px, 5.5vw, 36px); font-weight: 700; color: #B23B3F; letter-spacing: -0.01em">9%</p>
+        <h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.35">Of orders were ever partly filled</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A5568">Suppliers either delivered everything or nothing. That pattern points to a systemic cause — contracts, approvals, supplier capacity — not random shortage.</p>
+      </div>
+      <div class="lift" style="border: 1px solid #E6E8EC; border-radius: 12px; padding: 26px; display: flex; flex-direction: column; gap: 12px">
+        <div style="background: #F6F7F9; border-radius: 10px; padding: 12px 14px"><svg viewBox="0 0 300 100" role="img" aria-label="Critical medicines with zero fulfilment" style="width: 100%; height: 90px; display: block"><g font-family="Inter, sans-serif" font-size="12" fill="#0F1B2D"><text x="10" y="22">Anticoagulants</text><rect x="150" y="12" width="120" height="12" rx="6" fill="#E6E8EC"></rect><text x="292" y="22" text-anchor="end" fill="#C44E52" font-weight="600">0%</text><text x="10" y="52">Antibiotics</text><rect x="150" y="42" width="120" height="12" rx="6" fill="#E6E8EC"></rect><text x="292" y="52" text-anchor="end" fill="#C44E52" font-weight="600">0%</text><text x="10" y="82">Anaesthetics</text><rect x="150" y="72" width="120" height="12" rx="6" fill="#E6E8EC"></rect><text x="292" y="82" text-anchor="end" fill="#C44E52" font-weight="600">0%</text></g></svg></div>
+        <p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: clamp(28px, 5.5vw, 36px); font-weight: 700; color: #B23B3F; letter-spacing: -0.01em">40%</p>
+        <h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.35">Of items were never delivered at all</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A5568">Including life-saving medicines with no clinical substitute — anticoagulants, antibiotics, anaesthetics — where a stockout hurts most.</p>
+      </div>
+      <div class="lift" style="border: 1px solid #E6E8EC; border-radius: 12px; padding: 26px; display: flex; flex-direction: column; gap: 12px">
+        <div style="background: #F6F7F9; border-radius: 10px; padding: 12px 14px"><svg viewBox="0 0 300 100" role="img" aria-label="Half of the supply gap came from items that never arrived once" style="width: 100%; height: 90px; display: block"><rect class="bar" x="10" y="26" width="143" height="34" rx="4" fill="#C44E52"></rect><rect class="bar" style="animation-delay:.3s" x="155" y="26" width="135" height="34" rx="4" fill="#E3A3A6"></rect><g font-family="Inter, sans-serif" font-size="11"><text x="82" y="47" text-anchor="middle" fill="#FFFFFF" font-weight="600">never arrived once</text><text x="222" y="47" text-anchor="middle" fill="#7A2528">partly short</text><text x="10" y="84" fill="#6B7280">the supply gap, split by cause</text></g></svg></div>
+        <p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: clamp(28px, 5.5vw, 36px); font-weight: 700; color: #B23B3F; letter-spacing: -0.01em">Half</p>
+        <h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.35">Of the gap came from items that never arrived once</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A5568">1,607 orders with zero delivery made up about half of the total gap. Fix those, and most of the problem goes with them.</p>
+      </div>
+      <div class="lift" style="border: 1px solid #E6E8EC; border-radius: 12px; padding: 26px; display: flex; flex-direction: column; gap: 12px">
+        <div style="background: #F6F7F9; border-radius: 10px; padding: 12px 14px"><svg viewBox="0 0 300 100" role="img" aria-label="Five suppliers carry 70 percent of delivered value" style="width: 100%; height: 90px; display: block"><rect x="10" y="10" width="78" height="80" rx="3" fill="#1F3864"></rect><rect x="90" y="10" width="64" height="80" rx="3" fill="#1F3864"></rect><rect x="156" y="10" width="34" height="38" rx="3" fill="#2F5597"></rect><rect x="156" y="50" width="34" height="40" rx="3" fill="#2F5597"></rect><rect x="192" y="10" width="26" height="80" rx="3" fill="#2F5597"></rect><rect x="222" y="10" width="14" height="14" rx="2" fill="#C7CCD4"></rect><rect x="238" y="10" width="14" height="14" rx="2" fill="#C7CCD4"></rect><rect x="254" y="10" width="14" height="14" rx="2" fill="#C7CCD4"></rect><rect x="270" y="10" width="14" height="14" rx="2" fill="#C7CCD4"></rect><rect x="222" y="26" width="14" height="14" rx="2" fill="#C7CCD4"></rect><rect x="238" y="26" width="14" height="14" rx="2" fill="#C7CCD4"></rect><rect x="254" y="26" width="14" height="14" rx="2" fill="#C7CCD4"></rect><rect x="270" y="26" width="14" height="14" rx="2" fill="#C7CCD4"></rect><rect x="222" y="42" width="14" height="14" rx="2" fill="#C7CCD4"></rect><rect x="238" y="42" width="14" height="14" rx="2" fill="#C7CCD4"></rect><rect x="254" y="42" width="14" height="14" rx="2" fill="#C7CCD4"></rect><rect x="270" y="42" width="14" height="14" rx="2" fill="#C7CCD4"></rect><rect x="222" y="58" width="14" height="14" rx="2" fill="#C7CCD4"></rect><rect x="238" y="58" width="14" height="14" rx="2" fill="#C7CCD4"></rect><rect x="254" y="58" width="14" height="14" rx="2" fill="#C7CCD4"></rect><rect x="270" y="58" width="14" height="14" rx="2" fill="#C7CCD4"></rect><rect x="222" y="74" width="14" height="14" rx="2" fill="#C7CCD4"></rect><rect x="238" y="74" width="14" height="14" rx="2" fill="#C7CCD4"></rect><rect x="254" y="74" width="14" height="14" rx="2" fill="#C7CCD4"></rect><rect x="270" y="74" width="14" height="14" rx="2" fill="#C7CCD4"></rect></svg></div>
+        <p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: clamp(28px, 5.5vw, 36px); font-weight: 700; color: #B23B3F; letter-spacing: -0.01em">5 of 59</p>
+        <h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.35">Suppliers carried 70% of delivered value</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A5568">Two of them alone delivered nearly 40% — a single point of failure in the supply of essential medicines.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width: 1200px; margin: 0 auto; padding: 104px 32px 0">
+    <p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #8A6417">HOW I WORKED</p>
+    <h2 style="margin: 10px 0 0; font-family: 'Inter Tight', sans-serif; font-size: clamp(28px, 6vw, 40px); font-weight: 700; letter-spacing: -0.02em; max-width: 820px; line-height: 1.12">From a single KPI to a view of every order</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 24px; margin-top: 40px">
+      <div style="border-top: 3px solid #0F1B2D; padding-top: 18px; display: flex; flex-direction: column; gap: 8px">
+        <p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: 15px; font-weight: 700; color: #8A6417">01 · DATA</p>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #2C3A4F">Purchase orders and deliveries for every item over ten months, cleaned and joined in Power Query.</p>
+      </div>
+      <div style="border-top: 3px solid #0F1B2D; padding-top: 18px; display: flex; flex-direction: column; gap: 8px">
+        <p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: 15px; font-weight: 700; color: #8A6417">02 · SEGMENT</p>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #2C3A4F">Each order banded by the share delivered — nothing, 1–25%, … in full — instead of one average.</p>
+      </div>
+      <div style="border-top: 3px solid #0F1B2D; padding-top: 18px; display: flex; flex-direction: column; gap: 8px">
+        <p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: 15px; font-weight: 700; color: #8A6417">03 · DIAGNOSE</p>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #2C3A4F">Zero-delivery items cross-checked by clinical criticality, supplier and order frequency.</p>
+      </div>
+      <div style="border-top: 3px solid #0F1B2D; padding-top: 18px; display: flex; flex-direction: column; gap: 8px">
+        <p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: 15px; font-weight: 700; color: #8A6417">04 · BUILD</p>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #2C3A4F">Two Power BI dashboards: a procurement health monitor and a supplier risk view, fully cross-filtered.</p>
+      </div>
+      <div style="border-top: 3px solid #C9A84C; padding-top: 18px; display: flex; flex-direction: column; gap: 8px">
+        <p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: 15px; font-weight: 700; color: #8A6417">05 · PRESENT</p>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #2C3A4F">A board story deck: three pillars, a 12-month phased plan and the three decisions needed to start.</p>
+      </div>
+    </div>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px"><span style="font-size: 13px; padding: 7px 12px; border-radius: 999px; background: #F6F7F9; border: 1px solid #E6E8EC">Power BI (DAX, data model)</span><span style="font-size: 13px; padding: 7px 12px; border-radius: 999px; background: #F6F7F9; border: 1px solid #E6E8EC">Power Query · Excel</span><span style="font-size: 13px; padding: 7px 12px; border-radius: 999px; background: #F6F7F9; border: 1px solid #E6E8EC">Supplier segmentation</span><span style="font-size: 13px; padding: 7px 12px; border-radius: 999px; background: #F6F7F9; border: 1px solid #E6E8EC">ABC × VEN classification</span><span style="font-size: 13px; padding: 7px 12px; border-radius: 999px; background: #F6F7F9; border: 1px solid #E6E8EC">Board story deck</span></div>
+  </section>
+
+  <section style="max-width: 1200px; margin: 0 auto; padding: 104px 32px 0">
+    <p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #8A6417">WHAT I RECOMMENDED</p>
+    <h2 style="margin: 10px 0 0; font-family: 'Inter Tight', sans-serif; font-size: clamp(28px, 6vw, 40px); font-weight: 700; letter-spacing: -0.02em; max-width: 820px; line-height: 1.12">Three pillars, in three phases over twelve months</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 22px; margin-top: 40px">
+      <div class="lift" style="border: 1px solid #E6E8EC; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+        <p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: 15px; font-weight: 700; color: #8A6417">01</p>
+        <h3 style="margin: 0; font-size: 20px; font-weight: 700">Segment suppliers</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A5568">All 59 suppliers placed on value × reliability. Strategic partners get joint plans and preferred terms; under-performers get SLAs, a dashboard — or an alternative source.</p>
+      </div>
+      <div class="lift" style="border: 1px solid #E6E8EC; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+        <p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: 15px; font-weight: 700; color: #8A6417">02</p>
+        <h3 style="margin: 0; font-size: 20px; font-weight: 700">Stock by clinical criticality</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A5568">Every item classified by value and criticality (ABC × VEN). Vital items get higher safety stock and pre-approved alternative suppliers; forecasts adjusted for each supplier's real reliability.</p>
+      </div>
+      <div class="lift" style="border: 1px solid #E6E8EC; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+        <p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: 15px; font-weight: 700; color: #8A6417">03</p>
+        <h3 style="margin: 0; font-size: 20px; font-weight: 700">Early warning</h3>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #4A5568">Live tracking of every open order, alerts on orders at risk of non-delivery, and a mandatory root-cause review for every zero delivery.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width: 1200px; margin: 0 auto; padding: 104px 32px 0">
+    <div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+      <div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+        <p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #8A6417">PROJECTED IMPACT</p>
+        <h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: clamp(27px, 5.5vw, 38px); font-weight: 700; letter-spacing: -0.02em; line-height: 1.15">More than half the gap, recaptured</h2>
+        <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #4A5568">Each pillar closes a different part of the gap. Supplier management does the most; inventory policy protects the vital items first; process changes stop the same failures recurring.</p>
+        <p style="margin: 0; font-size: 13px; color: #6B7280">Supply gap indexed to 100; projected reduction by pillar over 12 months.</p>
+      </div>
+      <div style="flex: 999 1 560px; min-width: 0; background: #F6F7F9; border-radius: 14px; padding: 24px">
+        <svg viewBox="0 0 530 250" role="img" aria-label="Waterfall of the supply gap" style="width: 100%; height: auto; display: block"><rect class="col" x="10" y="10" width="80" height="170" rx="4" fill="#C44E52"></rect><text x="45" y="6" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#C44E52"></text><text x="45" y="228" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#4A5568">Supply gap</text><text x="45" y="242" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#4A5568">today = 100</text><rect class="col" style="animation-delay:0.25s" x="120" y="10" width="70" height="37" rx="3" fill="#2E7D52"></rect><text x="155" y="63" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#2E7D52">−22</text><text x="155" y="228" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#4A5568">Supplier</text><text x="155" y="242" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#4A5568">management</text><rect class="col" style="animation-delay:0.40s" x="230" y="47" width="70" height="29" rx="3" fill="#2E7D52"></rect><text x="265" y="92" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#2E7D52">−17</text><text x="265" y="228" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#4A5568">Inventory</text><text x="265" y="242" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#4A5568">policy</text><rect class="col" style="animation-delay:0.55s" x="340" y="76" width="70" height="26" rx="3" fill="#4C9F8A"></rect><text x="375" y="118" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#4C9F8A">−15</text><text x="375" y="228" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#4A5568">Process &amp;</text><text x="375" y="242" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#4A5568">early warning</text><rect class="col" style="animation-delay:.9s" x="450" y="102" width="70" height="78" rx="4" fill="#E3A3A6"></rect><text x="485" y="96" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#B23B3F">46</text><text x="485" y="228" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#4A5568">Remaining</text><text x="485" y="242" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" fill="#4A5568">gap</text><line x1="4" y1="180" x2="526" y2="180" stroke="#C7CCD4"></line></svg>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width: 1200px; margin: 0 auto; padding: 104px 32px 0">
+    <p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #8A6417">WHAT WAS DELIVERED</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 16px; margin-top: 28px">
+      <div class="lift" style="border: 1px solid #E6E8EC; border-radius: 10px; padding: 22px"><h3 style="margin: 0 0 6px; font-size: 16px; font-weight: 600">Procurement health monitor</h3><p style="margin: 0; font-size: 14px; line-height: 1.55; color: #4A5568">Power BI: orders by fulfilment band, item criticality, demand vs received.</p></div>
+      <div class="lift" style="border: 1px solid #E6E8EC; border-radius: 10px; padding: 22px"><h3 style="margin: 0 0 6px; font-size: 16px; font-weight: 600">Supplier risk dashboard</h3><p style="margin: 0; font-size: 14px; line-height: 1.55; color: #4A5568">Value delivered against reliability for all 59 suppliers.</p></div>
+      <div class="lift" style="border: 1px solid #E6E8EC; border-radius: 10px; padding: 22px"><h3 style="margin: 0 0 6px; font-size: 16px; font-weight: 600">Supplier segmentation</h3><p style="margin: 0; font-size: 14px; line-height: 1.55; color: #4A5568">Four groups — strategic partners, specialists, develop, de-risk — each with a playbook.</p></div>
+      <div class="lift" style="border: 1px solid #E6E8EC; border-radius: 10px; padding: 22px"><h3 style="margin: 0 0 6px; font-size: 16px; font-weight: 600">Item policy (ABC × VEN)</h3><p style="margin: 0; font-size: 14px; line-height: 1.55; color: #4A5568">Safety-stock and sourcing rules for vital, essential and non-essential items.</p></div>
+      <div class="lift" style="border: 1px solid #E6E8EC; border-radius: 10px; padding: 22px"><h3 style="margin: 0 0 6px; font-size: 16px; font-weight: 600">Early-warning design</h3><p style="margin: 0; font-size: 14px; line-height: 1.55; color: #4A5568">Open-order tracking, risk alerts and a five-whys log for zero deliveries.</p></div>
+      <div class="lift" style="border: 1px solid #E6E8EC; border-radius: 10px; padding: 22px"><h3 style="margin: 0 0 6px; font-size: 16px; font-weight: 600">Board deck &amp; roadmap</h3><p style="margin: 0; font-size: 14px; line-height: 1.55; color: #4A5568">12-month phased plan and the decisions needed to begin.</p></div>
+    </div>
+    <div style="margin-top: 28px; background: linear-gradient(180deg,#F6F7F9,#EEF1F5); border-radius: 16px; padding: 28px; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+      <div style="flex: 1 1 520px; min-width: 0; background: #FFFFFF; border: 1px solid #DDE1E7; border-radius: 12px; overflow: hidden; box-shadow: 0 14px 34px rgba(15,27,45,.10)">
+        <div style="display: flex; align-items: center; gap: 7px; padding: 10px 14px; background: #F1F3F6; border-bottom: 1px solid #E3E6EB"><span style="width: 10px; height: 10px; border-radius: 50%; background: #E07A7E"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #E8C46A"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #7CC08F"></span><span style="margin-left: 10px; font-size: 12px; font-weight: 600; color: #4A5568">Procurement health monitor</span></div>
+        <div style="padding: 18px"><div style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px"><span style="font-size: 11px; font-weight: 600; padding: 5px 9px; border-radius: 5px; background: #0F1B2D; color: #FFFFFF">All</span><span style="font-size: 11px; font-weight: 600; padding: 5px 9px; border-radius: 5px; background: #F1F3F6; color: #4A5568">0%</span><span style="font-size: 11px; font-weight: 600; padding: 5px 9px; border-radius: 5px; background: #F1F3F6; color: #4A5568">1–25%</span><span style="font-size: 11px; font-weight: 600; padding: 5px 9px; border-radius: 5px; background: #F1F3F6; color: #4A5568">25–75%</span><span style="font-size: 11px; font-weight: 600; padding: 5px 9px; border-radius: 5px; background: #F1F3F6; color: #4A5568">75–99%</span><span style="font-size: 11px; font-weight: 600; padding: 5px 9px; border-radius: 5px; background: #F1F3F6; color: #4A5568">Full</span></div><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(96px, 100%), 1fr)); gap: 8px"><div style="background: #F6F7F9; border-radius: 8px; padding: 10px 12px"><p style="margin: 0; font-size: 11px; color: #6B7280">Supply rate</p><p style="margin: 3px 0 0; font-family: 'Inter Tight', sans-serif; font-size: 20px; font-weight: 700; color: #1F3864">72.8%</p></div><div style="background: #F6F7F9; border-radius: 8px; padding: 10px 12px"><p style="margin: 0; font-size: 11px; color: #6B7280">Distinct items</p><p style="margin: 3px 0 0; font-family: 'Inter Tight', sans-serif; font-size: 20px; font-weight: 700; color: #1F3864">1,233</p></div><div style="background: #F6F7F9; border-radius: 8px; padding: 10px 12px"><p style="margin: 0; font-size: 11px; color: #6B7280">Suppliers</p><p style="margin: 3px 0 0; font-family: 'Inter Tight', sans-serif; font-size: 20px; font-weight: 700; color: #1F3864">59</p></div><div style="background: #F6F7F9; border-radius: 8px; padding: 10px 12px"><p style="margin: 0; font-size: 11px; color: #6B7280">Never delivered</p><p style="margin: 3px 0 0; font-family: 'Inter Tight', sans-serif; font-size: 20px; font-weight: 700; color: #C44E52">40%</p></div></div><div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 14px"><div style="flex: 1 1 200px"><svg viewBox="0 0 220 130" style="width: 100%; max-width: 260px; height: auto; display: block" role="img" aria-label="Repeat orders: 47 percent full, 44 percent zero, 9 percent partial">
+      <circle cx="65" cy="65" r="44" fill="none" stroke="#2F5597" stroke-width="18" stroke-dasharray="130 277" transform="rotate(-90 65 65)"></circle>
+      <circle cx="65" cy="65" r="44" fill="none" stroke="#9FB3D1" stroke-width="18" stroke-dasharray="25 277" stroke-dashoffset="-130" transform="rotate(-90 65 65)"></circle>
+      <circle cx="65" cy="65" r="44" fill="none" stroke="#C44E52" stroke-width="18" stroke-dasharray="122 277" stroke-dashoffset="-155" transform="rotate(-90 65 65)"></circle>
+      <g font-family="Inter, sans-serif" font-size="11"><rect x="128" y="34" width="10" height="10" rx="2" fill="#2F5597"></rect><text x="144" y="43" fill="#0F1B2D">Full 47%</text><rect x="128" y="58" width="10" height="10" rx="2" fill="#C44E52"></rect><text x="144" y="67" fill="#0F1B2D">Zero 44%</text><rect x="128" y="82" width="10" height="10" rx="2" fill="#9FB3D1"></rect><text x="144" y="91" fill="#0F1B2D">Partial 9%</text></g></svg></div><p style="flex: 1 1 160px; margin: 0; font-size: 12px; line-height: 1.5; color: #4A5568">Repeat orders by share delivered. Click a band to filter the item table.</p></div><div style="overflow-x: auto; margin-top: 12px"><table style="width: 100%; border-collapse: collapse; font-size: 12px; color: #0F1B2D"><thead><tr><th style="text-align: left; font-weight: 600; color: #6B7280; padding: 6px 6px; border-bottom: 1px solid #E6E8EC">Item</th><th style="text-align: left; font-weight: 600; color: #6B7280; padding: 6px 6px; border-bottom: 1px solid #E6E8EC">Supplied</th><th style="text-align: left; font-weight: 600; color: #6B7280; padding: 6px 6px; border-bottom: 1px solid #E6E8EC">Supplier</th><th style="text-align: left; font-weight: 600; color: #6B7280; padding: 6px 6px; border-bottom: 1px solid #E6E8EC">Class</th></tr></thead><tbody><tr><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap">Vancomycin 500 mg vial</td><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap"><span style="display: inline-block; width: 60px; height: 7px; border-radius: 4px; background: #EEF0F3; vertical-align: middle; margin-right: 6px"><span style="display: block; width: 0%; height: 7px; border-radius: 4px; background: #C44E52"></span></span>0%</td><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap">Supplier 14</td><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap"><span style="font-size: 11px; font-weight: 600; color: #8C2F33; background: #FBEDEE; padding: 3px 8px; border-radius: 999px">Vital</span></td></tr><tr><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap">Heparin sodium 5,000 IU</td><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap"><span style="display: inline-block; width: 60px; height: 7px; border-radius: 4px; background: #EEF0F3; vertical-align: middle; margin-right: 6px"><span style="display: block; width: 0%; height: 7px; border-radius: 4px; background: #C44E52"></span></span>0%</td><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap">Supplier 07</td><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap"><span style="font-size: 11px; font-weight: 600; color: #8C2F33; background: #FBEDEE; padding: 3px 8px; border-radius: 999px">Vital</span></td></tr><tr><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap">Ondansetron 4 mg/2 ml</td><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap"><span style="display: inline-block; width: 60px; height: 7px; border-radius: 4px; background: #EEF0F3; vertical-align: middle; margin-right: 6px"><span style="display: block; width: 0%; height: 7px; border-radius: 4px; background: #C44E52"></span></span>0%</td><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap">Supplier 22</td><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap"><span style="font-size: 11px; font-weight: 600; color: #7A5A12; background: #FBF3DF; padding: 3px 8px; border-radius: 999px">Essential</span></td></tr><tr><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap">Pantoprazole 40 mg tab</td><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap"><span style="display: inline-block; width: 60px; height: 7px; border-radius: 4px; background: #EEF0F3; vertical-align: middle; margin-right: 6px"><span style="display: block; width: 100%; height: 7px; border-radius: 4px; background: #2E7D52"></span></span>100%</td><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap">Supplier 02</td><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap"><span style="font-size: 11px; font-weight: 600; color: #7A5A12; background: #FBF3DF; padding: 3px 8px; border-radius: 999px">Essential</span></td></tr><tr><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap">Atorvastatin 20 mg tab</td><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap"><span style="display: inline-block; width: 60px; height: 7px; border-radius: 4px; background: #EEF0F3; vertical-align: middle; margin-right: 6px"><span style="display: block; width: 100%; height: 7px; border-radius: 4px; background: #2E7D52"></span></span>100%</td><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap">Supplier 05</td><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap"><span style="font-size: 11px; font-weight: 600; color: #7A5A12; background: #FBF3DF; padding: 3px 8px; border-radius: 999px">Essential</span></td></tr><tr><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap">Sitagliptin + metformin</td><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap"><span style="display: inline-block; width: 60px; height: 7px; border-radius: 4px; background: #EEF0F3; vertical-align: middle; margin-right: 6px"><span style="display: block; width: 82%; height: 7px; border-radius: 4px; background: #2F5597"></span></span>82%</td><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap">Supplier 11</td><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap"><span style="font-size: 11px; font-weight: 600; color: #4A5568; background: #EEF0F3; padding: 3px 8px; border-radius: 999px">Non-ess.</span></td></tr></tbody></table></div></div>
+      </div><div style="flex: 1 1 320px; min-width: 0; background: #FFFFFF; border: 1px solid #DDE1E7; border-radius: 12px; overflow: hidden; box-shadow: 0 14px 34px rgba(15,27,45,.10)">
+        <div style="display: flex; align-items: center; gap: 7px; padding: 10px 14px; background: #F1F3F6; border-bottom: 1px solid #E3E6EB"><span style="width: 10px; height: 10px; border-radius: 50%; background: #E07A7E"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #E8C46A"></span><span style="width: 10px; height: 10px; border-radius: 50%; background: #7CC08F"></span><span style="margin-left: 10px; font-size: 12px; font-weight: 600; color: #4A5568">Supplier risk</span></div>
+        <div style="padding: 18px"><div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(96px, 100%), 1fr)); gap: 8px"><div style="background: #F6F7F9; border-radius: 8px; padding: 10px 12px"><p style="margin: 0; font-size: 11px; color: #6B7280">Top-5 share</p><p style="margin: 3px 0 0; font-family: 'Inter Tight', sans-serif; font-size: 20px; font-weight: 700; color: #C44E52">70%</p></div><div style="background: #F6F7F9; border-radius: 8px; padding: 10px 12px"><p style="margin: 0; font-size: 11px; color: #6B7280">Top-2 share</p><p style="margin: 3px 0 0; font-family: 'Inter Tight', sans-serif; font-size: 20px; font-weight: 700; color: #C44E52">~40%</p></div></div><div style="margin-top: 12px"><svg viewBox="0 0 300 180" style="width: 100%; height: auto; display: block" role="img" aria-label="Suppliers plotted by fulfilment reliability and value">
+      <rect x="30" y="10" width="130" height="72" fill="#FBEDEE"></rect><rect x="160" y="10" width="130" height="72" fill="#E8EEF8"></rect><rect x="30" y="82" width="130" height="72" fill="#F6F7F9"></rect><rect x="160" y="82" width="130" height="72" fill="#F2F7F4"></rect>
+      <g font-family="Inter, sans-serif" font-size="9" fill="#6B7280"><text x="36" y="22">Develop / manage</text><text x="284" y="22" text-anchor="end">Strategic partners</text><text x="36" y="148">De-risk / alternative</text><text x="284" y="148" text-anchor="end">Reliable specialists</text></g>
+      <circle cx="250" cy="30" r="16" fill="#2F5597" fill-opacity=".85"></circle><circle cx="215" cy="48" r="14" fill="#2F5597" fill-opacity=".85"></circle><circle cx="190" cy="120" r="10" fill="#9FB3D1" fill-opacity=".85"></circle><circle cx="90" cy="40" r="9" fill="#C44E52" fill-opacity=".85"></circle><circle cx="70" cy="100" r="7" fill="#C44E52" fill-opacity=".85"></circle><circle cx="150" cy="70" r="8" fill="#9FB3D1" fill-opacity=".85"></circle><circle cx="230" cy="105" r="6" fill="#9FB3D1" fill-opacity=".85"></circle><circle cx="60" cy="60" r="6" fill="#C44E52" fill-opacity=".85"></circle><circle cx="120" cy="120" r="5" fill="#9FB3D1" fill-opacity=".85"></circle><circle cx="175" cy="38" r="7" fill="#2F5597" fill-opacity=".85"></circle><circle cx="40" cy="130" r="4" fill="#9FB3D1" fill-opacity=".85"></circle><circle cx="105" cy="85" r="5" fill="#9FB3D1" fill-opacity=".85"></circle>
+      <g font-family="Inter, sans-serif" font-size="10" fill="#4A5568"><text x="160" y="172" text-anchor="middle">Fulfilment reliability →</text><text x="14" y="82" text-anchor="middle" transform="rotate(-90 14 82)">Value →</text></g></svg></div><div style="overflow-x: auto; margin-top: 12px"><table style="width: 100%; border-collapse: collapse; font-size: 12px; color: #0F1B2D"><thead><tr><th style="text-align: left; font-weight: 600; color: #6B7280; padding: 6px 6px; border-bottom: 1px solid #E6E8EC">Supplier</th><th style="text-align: right; font-weight: 600; color: #6B7280; padding: 6px 6px; border-bottom: 1px solid #E6E8EC">Value</th><th style="text-align: right; font-weight: 600; color: #6B7280; padding: 6px 6px; border-bottom: 1px solid #E6E8EC">Supplied</th></tr></thead><tbody><tr><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap">Supplier 02</td><td style="text-align: right; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap">23%</td><td style="text-align: right; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap">82%</td></tr><tr><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap">Supplier 05</td><td style="text-align: right; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap">19%</td><td style="text-align: right; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap">100%</td></tr><tr><td style="text-align: left; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap">Supplier 11</td><td style="text-align: right; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap">9%</td><td style="text-align: right; padding: 7px 6px; border-bottom: 1px solid #F1F3F6; white-space: nowrap">68%</td></tr></tbody></table></div></div>
+      </div>
+    </div>
+    <p style="margin: 10px 0 0; font-size: 13px; color: #6B7280">Recreated for this page from the delivered work — names hidden, some values are sample data.</p>
+  </section>
+
+  <section style="max-width: 1200px; margin: 0 auto; padding: 104px 32px 0">
+    <p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.12em; color: #8A6417">IN NUMBERS</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr)); gap: 22px; margin-top: 28px">
+      <div style="background: #0F1B2D; color: #FFFFFF; border-radius: 12px; padding: 30px"><p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: clamp(28px, 6vw, 40px); font-weight: 700; color: #C9A84C">&gt; 50%</p><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.55; color: #C9D1DD">of the supply gap projected to be recaptured</p></div>
+      <div style="background: #0F1B2D; color: #FFFFFF; border-radius: 12px; padding: 30px"><p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: clamp(28px, 6vw, 40px); font-weight: 700; color: #C9A84C">1,233</p><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.55; color: #C9D1DD">items placed in a criticality class with a stocking rule</p></div>
+      <div style="background: #0F1B2D; color: #FFFFFF; border-radius: 12px; padding: 30px"><p style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: clamp(28px, 6vw, 40px); font-weight: 700; color: #C9A84C">12 months</p><p style="margin: 8px 0 0; font-size: 15px; line-height: 1.55; color: #C9D1DD">three phases: quick wins, roll-out, continuous improvement</p></div>
+    </div>
+  </section>
+
+  <section id="cta" style="max-width: 1200px; margin: 0 auto; padding: 96px 32px 104px">
+    <div style="background: #0F1B2D; color: #FFFFFF; border-radius: 14px; padding: 48px; display: flex; flex-wrap: wrap; gap: 32px; align-items: center; justify-content: space-between">
+      <div style="flex: 999 1 480px; min-width: 0">
+        <h2 style="margin: 0; font-family: 'Inter Tight', sans-serif; font-size: clamp(26px, 5.5vw, 34px); font-weight: 700; letter-spacing: -0.02em">Is your headline KPI telling the whole story?</h2>
+        <p style="margin: 10px 0 0; font-size: 17px; color: #C9D1DD">Averages hide the extremes that cost the most.</p>
+      </div>
+      <a class="btn" href="https://calendly.com/mohamad-safwat42/30min" target="_blank" rel="noopener" style="flex: 0 0 auto; background: #C9A84C; color: #0F1B2D; text-decoration: none; font-weight: 600; font-size: 17px; padding: 16px 26px; border-radius: 6px">Book a 30-minute call</a>
+    </div>
+  </section>
+
+</div>
+</body>
+</html>
